@@ -13,11 +13,11 @@
             android:clickable="false"
            android:text="@string/splash_normal_test" />
     <Button
-            android:id="@+id/netTest"
+            android:id="@+id/uiTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:focusable="false"
             android:clickable="false"
-            android:text="@string/splash_okhttp_test" />
+            android:text="@string/splash_refresh_ui" />
 </LinearLayout>

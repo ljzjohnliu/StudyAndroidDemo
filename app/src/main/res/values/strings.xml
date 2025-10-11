@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">StudyAndroid</string>
     <string name="splash_normal_test">日常测试</string>
-    <string name="splash_okhttp_test">Okhttp测试</string>
+    <string name="splash_refresh_ui">测试子线程刷新UI</string>
 
     <string name="okhttp_sync">同步请求</string>
     <string name="okhttp_async">异步请求</string>
+
+    <string name="refresh_ui">子线程刷新UI</string>
 </resources>
