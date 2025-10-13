@@ -35,6 +35,11 @@
             android:name="com.study.android.refreshui.RefreshUIActivity"
             android:exported="true"
             android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.launchmode.StandardActivity"
+            android:exported="true"
+            android:launchMode="standard"
+            android:theme="@style/Theme.StudyAndroid"/>
     </application>
 
 </manifest>

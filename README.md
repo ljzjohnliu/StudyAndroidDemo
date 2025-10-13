@@ -2,10 +2,23 @@
 
 ## 简介
 
-学习Okhttp使用
-
 调试日志
-logcat -s RefreshUIActivity
+logcat -s StandardActivity -s RefreshUIActivity
+
+### 启动模式
+StandardActivity的启动模式是标准的，在当前界面再次startActivity的话会启动一个新的activity
+压入栈，前一个Activity实例先执行onPause，先失去交互能力，再执行新的Activity的onCreate、onStart、onResume，新的activity获取交互能力，这时候前一个不可见了再执行其onStop方法
+10-13 16:09:26.462 23775 23775 D StandardActivity: onCreate: com.study.android.launchmode.StandardActivity@c2e58b8
+10-13 16:09:26.463 23775 23775 D StandardActivity: onStart: com.study.android.launchmode.StandardActivity@c2e58b8
+10-13 16:09:26.465 23775 23775 D StandardActivity: onResume: com.study.android.launchmode.StandardActivity@c2e58b8
+10-13 16:09:26.465 23775 23775 D StandardActivity: onPostResume: com.study.android.launchmode.StandardActivity@c2e58b8
+
+10-13 16:09:29.104 23775 23775 D StandardActivity: onPause: com.study.android.launchmode.StandardActivity@c2e58b8
+10-13 16:09:29.120 23775 23775 D StandardActivity: onCreate: com.study.android.launchmode.StandardActivity@b248da9
+10-13 16:09:29.121 23775 23775 D StandardActivity: onStart: com.study.android.launchmode.StandardActivity@b248da9
+10-13 16:09:29.122 23775 23775 D StandardActivity: onResume: com.study.android.launchmode.StandardActivity@b248da9
+10-13 16:09:29.123 23775 23775 D StandardActivity: onPostResume: com.study.android.launchmode.StandardActivity@b248da9
+10-13 16:09:29.685 23775 23775 D StandardActivity: onStop: com.study.android.launchmode.StandardActivity@c2e58b8
 
 
 ### 只更新Text不会崩溃

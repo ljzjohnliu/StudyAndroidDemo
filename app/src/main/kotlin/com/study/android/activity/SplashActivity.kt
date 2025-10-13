@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.core.app.ActivityCompat
 import com.study.android.R
+import com.study.android.launchmode.StandardActivity
 import com.study.android.refreshui.RefreshUIActivity
 import com.study.android.utils.ViewUtil
 
@@ -18,7 +19,7 @@ class SplashActivity : ComponentActivity() {
 
     private val REQUEST_READ_STORAGE = 1
 
-    private var normalBtn: Button? = null
+    private var launchmodeBtn: Button? = null
     private var uiBtn: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,11 +34,11 @@ class SplashActivity : ComponentActivity() {
     }
 
     private fun initViews() {
-        normalBtn = findViewById(R.id.nomalTest)
+        launchmodeBtn = findViewById(R.id.launchmodeTest)
         uiBtn = findViewById(R.id.uiTest)
 
-        normalBtn!!.setOnClickListener {
-//            startActivity(Intent(this, MainActivity::class.java))
+        launchmodeBtn!!.setOnClickListener {
+            startActivity(Intent(this, StandardActivity::class.java))
 
         }
         uiBtn!!.setOnClickListener{
