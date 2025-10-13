@@ -40,6 +40,21 @@
             android:exported="true"
             android:launchMode="standard"
             android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.launchmode.SingleTopActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.launchmode.SingleTaskActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.launchmode.SingleInstanceActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.StudyAndroid"/>
     </application>
 
 </manifest>

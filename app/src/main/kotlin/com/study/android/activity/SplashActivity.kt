@@ -9,6 +9,9 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.core.app.ActivityCompat
 import com.study.android.R
+import com.study.android.launchmode.SingleInstanceActivity
+import com.study.android.launchmode.SingleTaskActivity
+import com.study.android.launchmode.SingleTopActivity
 import com.study.android.launchmode.StandardActivity
 import com.study.android.refreshui.RefreshUIActivity
 import com.study.android.utils.ViewUtil
@@ -38,8 +41,10 @@ class SplashActivity : ComponentActivity() {
         uiBtn = findViewById(R.id.uiTest)
 
         launchmodeBtn!!.setOnClickListener {
-            startActivity(Intent(this, StandardActivity::class.java))
-
+//            startActivity(Intent(this, StandardActivity::class.java))
+//            startActivity(Intent(this, SingleTopActivity::class.java))
+//            startActivity(Intent(this, SingleTaskActivity::class.java))
+            startActivity(Intent(this, SingleInstanceActivity::class.java))
         }
         uiBtn!!.setOnClickListener{
             startActivity(Intent(this, RefreshUIActivity::class.java))

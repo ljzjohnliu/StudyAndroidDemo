@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import com.study.android.R;
 
-public class StandardActivity extends Activity {
-    private static final String TAG = "StandardActivity";
+public class SingleTaskActivity extends Activity {
+    private static final String TAG = "SingleTaskActivity";
     private static int mCount = 0;
     private TextView testTv;
     private Button junmpBtn;
@@ -29,7 +29,7 @@ public class StandardActivity extends Activity {
         testTv.setText("该Activity创建了" + mCount + "次");
         junmpBtn = findViewById(R.id.junmp);
         junmpBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, StandardActivity.class));
+            startActivity(new Intent(this, SingleTaskActivity.class));
         });
     }
 
