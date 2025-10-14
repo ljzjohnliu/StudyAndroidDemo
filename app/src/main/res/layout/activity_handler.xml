@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
+    <TextView
+        android:id="@+id/testTxt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:text="I am Text!"
+        />
     <Button
-        android:id="@+id/launchmodeTest"
+        android:id="@+id/sendMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:focusable="false"
-        android:clickable="false"
-        android:text="@string/splash_launch_mode" />
+        android:text="sendMessage用法" />
     <Button
-        android:id="@+id/uiTest"
+        android:id="@+id/post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:focusable="false"
-        android:clickable="false"
-        android:text="@string/splash_refresh_ui" />
+        android:text="post用法" />
     <Button
-        android:id="@+id/handlerTest"
+        android:id="@+id/sendToTarget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:focusable="false"
-        android:clickable="false"
-        android:text="@string/splash_handler" />
+        android:text="sendToTarget用法" />
 </LinearLayout>

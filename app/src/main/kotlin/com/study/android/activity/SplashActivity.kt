@@ -5,10 +5,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.core.app.ActivityCompat
 import com.study.android.R
+import com.study.android.handler.HandlerActivity
 import com.study.android.launchmode.SingleInstanceActivity
 import com.study.android.launchmode.SingleTaskActivity
 import com.study.android.launchmode.SingleTopActivity
@@ -18,12 +20,13 @@ import com.study.android.utils.ViewUtil
 
 
 @SuppressLint("CustomSplashScreen")
-class SplashActivity : ComponentActivity() {
+class SplashActivity : ComponentActivity(), View.OnClickListener {
 
     private val REQUEST_READ_STORAGE = 1
 
     private var launchmodeBtn: Button? = null
     private var uiBtn: Button? = null
+    private var handlerBtn: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,15 +42,26 @@ class SplashActivity : ComponentActivity() {
     private fun initViews() {
         launchmodeBtn = findViewById(R.id.launchmodeTest)
         uiBtn = findViewById(R.id.uiTest)
+        handlerBtn = findViewById(R.id.handlerTest)
+        launchmodeBtn!!.setOnClickListener(this)
+        uiBtn!!.setOnClickListener(this)
+        handlerBtn!!.setOnClickListener(this)
+    }
 
-        launchmodeBtn!!.setOnClickListener {
-//            startActivity(Intent(this, StandardActivity::class.java))
-//            startActivity(Intent(this, SingleTopActivity::class.java))
-//            startActivity(Intent(this, SingleTaskActivity::class.java))
-            startActivity(Intent(this, SingleInstanceActivity::class.java))
-        }
-        uiBtn!!.setOnClickListener{
-            startActivity(Intent(this, RefreshUIActivity::class.java))
+    override fun onClick(v: View) {
+        when (v.getId()) {
+            R.id.launchmodeTest -> {
+//                startActivity(Intent(this, StandardActivity::class.java))
+//                startActivity(Intent(this, SingleTopActivity::class.java))
+//                startActivity(Intent(this, SingleTaskActivity::class.java))
+                startActivity(Intent(this, SingleInstanceActivity::class.java))
+            }
+            R.id.uiTest -> {
+                startActivity(Intent(this, RefreshUIActivity::class.java))
+            }
+            R.id.handlerTest -> {
+                startActivity(Intent(this, HandlerActivity::class.java))
+            }
         }
     }
 

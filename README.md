@@ -3,7 +3,7 @@
 ## 简介
 
 调试日志
-logcat -s StandardActivity -s SingleTopActivity -s SingleTaskActivity -s SingleInstanceActivity -s RefreshUIActivity
+logcat -s StandardActivity -s SingleTopActivity -s SingleTaskActivity -s SingleInstanceActivity -s RefreshUIActivity -s HandlerActivity
 
 ### 启动模式
 #### 标准启动模式

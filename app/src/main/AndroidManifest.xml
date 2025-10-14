@@ -32,10 +32,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.study.android.refreshui.RefreshUIActivity"
-            android:exported="true"
-            android:theme="@style/Theme.StudyAndroid"/>
-        <activity
             android:name="com.study.android.launchmode.StandardActivity"
             android:exported="true"
             android:launchMode="standard"
@@ -54,6 +50,14 @@
             android:name="com.study.android.launchmode.SingleInstanceActivity"
             android:exported="true"
             android:launchMode="singleInstance"
+            android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.refreshui.RefreshUIActivity"
+            android:exported="true"
+            android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.handler.HandlerActivity"
+            android:exported="true"
             android:theme="@style/Theme.StudyAndroid"/>
     </application>
 
