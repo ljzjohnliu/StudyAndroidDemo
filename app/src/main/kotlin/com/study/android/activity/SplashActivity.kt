@@ -10,6 +10,7 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.core.app.ActivityCompat
 import com.study.android.R
+import com.study.android.customview.CustomViewActivity
 import com.study.android.handler.HandlerActivity
 import com.study.android.launchmode.SingleInstanceActivity
 import com.study.android.launchmode.SingleTaskActivity
@@ -29,6 +30,7 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
     private var uiBtn: Button? = null
     private var handlerBtn: Button? = null
     private var sharedPreferencesBtn: Button? = null
+    private var customViewBtn: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +52,8 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
         handlerBtn!!.setOnClickListener(this)
         sharedPreferencesBtn = findViewById(R.id.sharedPreferencesTest)
         sharedPreferencesBtn!!.setOnClickListener(this)
+        customViewBtn = findViewById(R.id.custom_view)
+        customViewBtn!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -68,6 +72,9 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
             }
             R.id.sharedPreferencesTest -> {
                 startActivity(Intent(this, SharedPreferencesActivity::class.java))
+            }
+            R.id.custom_view -> {
+                startActivity(Intent(this, CustomViewActivity::class.java))
             }
         }
     }

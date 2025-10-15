@@ -1,0 +1,2 @@
+-keep class com.study.view.MyBanner { *; }
+-keep class com.study.view.** { *; }

@@ -4,6 +4,7 @@
     <string name="splash_refresh_ui">测试子线程刷新UI</string>
     <string name="splash_handler">Handler使用</string>
     <string name="splash_sharedpreferences">SharedPreferences使用</string>
+    <string name="splash_custom_view">自定义View</string>
 
     <string name="okhttp_sync">同步请求</string>
     <string name="okhttp_async">异步请求</string>

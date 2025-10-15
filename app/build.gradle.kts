@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -60,7 +61,8 @@ dependencies {
 //    implementation("com.squareup.okhttp3:okhttp:5.2.1")
 //    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     api(libs.okhttp)
-//    implementation(project(":studynet"))
+    implementation(project(":customview"))
     implementation("com.google.code.gson:gson:2.13.2")
     implementation("com.tencent:mmkv-static:2.2.4")
+//    implementation("io.github.youth5201314:banner:2.2.3")
 }
