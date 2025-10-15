@@ -9,23 +9,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:focusable="false"
-        android:clickable="false"
+        android:textAllCaps="false"
         android:text="@string/splash_launch_mode" />
     <Button
         android:id="@+id/uiTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:focusable="false"
-        android:clickable="false"
+        android:textAllCaps="false"
         android:text="@string/splash_refresh_ui" />
     <Button
         android:id="@+id/handlerTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:focusable="false"
-        android:clickable="false"
+        android:textAllCaps="false"
         android:text="@string/splash_handler" />
+    <Button
+        android:id="@+id/sharedPreferencesTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        android:text="@string/splash_sharedpreferences" />
 </LinearLayout>

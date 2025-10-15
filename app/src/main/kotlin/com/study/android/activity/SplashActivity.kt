@@ -16,6 +16,7 @@ import com.study.android.launchmode.SingleTaskActivity
 import com.study.android.launchmode.SingleTopActivity
 import com.study.android.launchmode.StandardActivity
 import com.study.android.refreshui.RefreshUIActivity
+import com.study.android.sharedpreferences.SharedPreferencesActivity
 import com.study.android.utils.ViewUtil
 
 
@@ -27,6 +28,7 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
     private var launchmodeBtn: Button? = null
     private var uiBtn: Button? = null
     private var handlerBtn: Button? = null
+    private var sharedPreferencesBtn: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,11 +43,13 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
 
     private fun initViews() {
         launchmodeBtn = findViewById(R.id.launchmodeTest)
-        uiBtn = findViewById(R.id.uiTest)
-        handlerBtn = findViewById(R.id.handlerTest)
         launchmodeBtn!!.setOnClickListener(this)
+        uiBtn = findViewById(R.id.uiTest)
         uiBtn!!.setOnClickListener(this)
+        handlerBtn = findViewById(R.id.handlerTest)
         handlerBtn!!.setOnClickListener(this)
+        sharedPreferencesBtn = findViewById(R.id.sharedPreferencesTest)
+        sharedPreferencesBtn!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -61,6 +65,9 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
             }
             R.id.handlerTest -> {
                 startActivity(Intent(this, HandlerActivity::class.java))
+            }
+            R.id.sharedPreferencesTest -> {
+                startActivity(Intent(this, SharedPreferencesActivity::class.java))
             }
         }
     }

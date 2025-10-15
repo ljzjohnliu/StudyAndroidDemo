@@ -7,22 +7,37 @@
     <TextView
         android:id="@+id/testTxt"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="100dp"
         android:layout_marginTop="8dp"
         android:text="I am Text!"
         />
     <Button
-        android:id="@+id/refreshUIBtn"
+        android:id="@+id/writeSp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
-        android:text="@string/refresh_ui" />
+        android:text="sharedPreferences存数据" />
     <Button
-        android:id="@+id/refreshUIBtn2"
+        android:id="@+id/readSp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
-        android:text="子线程刷新UI2" />
+        android:text="sharedPreferences读数据" />
+
+    <Button
+        android:id="@+id/writeMMKV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        android:text="MMKV存数据" />
+    <Button
+        android:id="@+id/readMMKV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        android:text="MMKV读数据" />
 </LinearLayout>

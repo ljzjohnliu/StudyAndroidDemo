@@ -59,6 +59,10 @@
             android:name="com.study.android.handler.HandlerActivity"
             android:exported="true"
             android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.sharedpreferences.SharedPreferencesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.StudyAndroid"/>
     </application>
 
 </manifest>

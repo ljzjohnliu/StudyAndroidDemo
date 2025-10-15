@@ -61,5 +61,6 @@ dependencies {
 //    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     api(libs.okhttp)
 //    implementation(project(":studynet"))
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.code.gson:gson:2.13.2")
+    implementation("com.tencent:mmkv-static:2.2.4")
 }
