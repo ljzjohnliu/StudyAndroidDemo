@@ -4,46 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
+    <TextView
+        android:id="@+id/testTxt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:text="I am Text!"
+        />
+    <!--
+    com.youth.banner.Banner
+    <com.study.view.MyBanner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+    -->
+    <com.study.view.MyBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#997654"
+        />
     <Button
-        android:id="@+id/launchmodeTest"
+        android:id="@+id/readSp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
-        android:text="@string/splash_launch_mode" />
+        android:text="sharedPreferences读数据" />
+
     <Button
-        android:id="@+id/uiTest"
+        android:id="@+id/writeMMKV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
-        android:text="@string/splash_refresh_ui" />
+        android:text="MMKV存数据" />
     <Button
-        android:id="@+id/handlerTest"
+        android:id="@+id/readMMKV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
-        android:text="@string/splash_handler" />
-    <Button
-        android:id="@+id/sharedPreferencesTest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="false"
-        android:text="@string/splash_sharedpreferences" />
-    <Button
-        android:id="@+id/custom_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="false"
-        android:text="@string/splash_custom_view" />
-    <Button
-        android:id="@+id/innerTest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="false"
-        android:text="@string/splash_inner_test" />
+        android:text="MMKV读数据" />
 </LinearLayout>

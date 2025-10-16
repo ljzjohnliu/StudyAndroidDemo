@@ -12,6 +12,7 @@ import androidx.core.app.ActivityCompat
 import com.study.android.R
 import com.study.android.customview.CustomViewActivity
 import com.study.android.handler.HandlerActivity
+import com.study.android.inner.TestInnerActivity
 import com.study.android.launchmode.SingleInstanceActivity
 import com.study.android.launchmode.SingleTaskActivity
 import com.study.android.launchmode.SingleTopActivity
@@ -31,6 +32,7 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
     private var handlerBtn: Button? = null
     private var sharedPreferencesBtn: Button? = null
     private var customViewBtn: Button? = null
+    private var innerTestBtn: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +56,8 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
         sharedPreferencesBtn!!.setOnClickListener(this)
         customViewBtn = findViewById(R.id.custom_view)
         customViewBtn!!.setOnClickListener(this)
+        innerTestBtn = findViewById(R.id.innerTest)
+        innerTestBtn!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -75,6 +79,9 @@ class SplashActivity : ComponentActivity(), View.OnClickListener {
             }
             R.id.custom_view -> {
                 startActivity(Intent(this, CustomViewActivity::class.java))
+            }
+            R.id.innerTest -> {
+                startActivity(Intent(this, TestInnerActivity::class.java))
             }
         }
     }

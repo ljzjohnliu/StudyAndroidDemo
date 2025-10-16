@@ -67,6 +67,10 @@
             android:name="com.study.android.customview.CustomViewActivity"
             android:exported="true"
             android:theme="@style/Theme.StudyAndroid"/>
+        <activity
+            android:name="com.study.android.inner.TestInnerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.StudyAndroid"/>
     </application>
 
 </manifest>
