@@ -31,3 +31,4 @@ dependencyResolutionManagement {
 rootProject.name = "StudyAndroidDemo"
 include(":app")
 include(":customview")
+include(":studyjava")

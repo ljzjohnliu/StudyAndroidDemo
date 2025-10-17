@@ -62,6 +62,7 @@ dependencies {
 //    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     api(libs.okhttp)
     implementation(project(":customview"))
+    implementation(project(":studyjava"))
     implementation("com.google.code.gson:gson:2.13.2")
     implementation("com.tencent:mmkv-static:2.2.4")
 //    implementation("io.github.youth5201314:banner:2.2.3")
