@@ -39,6 +39,11 @@ public class People extends Mammal implements Walkable {
         return ss;
     }
 
+    public String getCountry() {
+        System.out.println("I am People method getCountry!!!");
+        return country;
+    }
+
     public int getAge() {
         System.out.println("I am People method getAge!!!");
         return age;

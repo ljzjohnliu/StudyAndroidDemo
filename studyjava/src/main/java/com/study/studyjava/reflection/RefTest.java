@@ -1,6 +1,7 @@
 package com.study.studyjava.reflection;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -39,11 +40,23 @@ public class RefTest {
 //            String type = (String) getTypeM.invoke(people);
 //            System.out.println("refMethod, getType return is:" + type);
 
+            //静态变量反射
+            System.out.println("---- before ---- age is:" + people.getAge() + ", country is:" + people.getCountry());
+            Field ageF = clazz.getDeclaredField("age");
+            ageF.setAccessible(true);
+            ageF.set(people, 100);
+
+            Field countryF = clazz.getDeclaredField("country");
+            countryF.setAccessible(true);
+            countryF.set(clazz, "USA");
+            System.out.println("---- after ---- age is:" + people.getAge() + ", country is:" + people.getCountry());
+
             //静态方法反射
             Method sayHiM = clazz.getDeclaredMethod("sayHi", String.class, int.class);
-            sayHiM.invoke(clazz, "zzz", 22);
+//            sayHiM.invoke(clazz, "zzz", 22);
+            sayHiM.invoke(people, "zzz", 22);
         } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException |
-                 IllegalAccessException e) {
+                 IllegalAccessException | NoSuchFieldException e) {
             throw new RuntimeException(e);
         }
     }
