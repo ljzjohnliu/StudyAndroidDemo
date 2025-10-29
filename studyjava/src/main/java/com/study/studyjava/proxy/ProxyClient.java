@@ -10,8 +10,11 @@ public class ProxyClient {
         proxy.buyHouse(1000000);
 
         System.out.println("动态代理测试");
-        Buy dynamicProxy = (Buy) Proxy.newProxyInstance(buy.getClass().getClassLoader(),
-                buy.getClass().getInterfaces(), new DynamicProxy(buy));
-        dynamicProxy.buyHouse(1000000);
+//        Buy dynamicProxy = (Buy) Proxy.newProxyInstance(buy.getClass().getClassLoader(),
+//                buy.getClass().getInterfaces(), new DynamicProxy(buy));
+//        dynamicProxy.buyHouse(1000000);
+
+        Buy dynamicProxy2 = ProxyFactory.getProxy(buy);
+        dynamicProxy2.buyHouse(10000000);
     }
 }
